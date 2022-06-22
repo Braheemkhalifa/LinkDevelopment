@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import SingleSlide from './SingleSlide';
+import VideoPop from './VideoPop';
 
 const settings = {
   dots: true,
@@ -30,8 +31,12 @@ const SliderComponent = () => {
       );
   }, []);
 
+  const [isVideoOpen, setVideoOpen] = useState(false);
+  const [videoUrl, setvideoUrl] = useState('QFaFIcGhPoM');
+
   return (
     <>
+      <VideoPop videoUrl={videoUrl} isVideoOpen={isVideoOpen} setVideoOpen={setVideoOpen} />
       {slidesError && <p className="alert"> Something Wrong Happend, sorry cannot get Slides </p>}
 
       {!isSlidesLoaded && !slidesError && <p className="alert"> Loading ... </p>}
@@ -45,8 +50,10 @@ const SliderComponent = () => {
                 title={slide.title}
                 itemUrl={slide.itemUrl}
                 category={slide.category}
-                videoUrl={slide.videoUrl}
                 colorCode={slide.colorCode}
+                setVideoOpen={setVideoOpen}
+                setvideoUrl={setvideoUrl}
+                videoID={slide.videoUrl ? slide.videoUrl : '7X8II6J-6mU'}
               />
             </div>
           ))}

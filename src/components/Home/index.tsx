@@ -3,7 +3,6 @@ import SliderComponent from 'components/Shared/SliderComponent';
 import ThingsWeDo from 'components/Shared/ThingsWeDo';
 
 const Home = () => {
-  
   return (
     <div>
       <SliderComponent />
