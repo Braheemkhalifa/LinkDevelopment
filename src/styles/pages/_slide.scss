@@ -1,0 +1,186 @@
+/*======================================
+=              Slider Section         =
+======================================*/
+
+.slide-content {
+  height: 40rem;
+  .container {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 12;
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+    @include breakpoint(phone) {
+      flex-direction: column;
+    }
+
+    .left-section {
+      padding: 2rem 0 0;
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+      @include breakpoint(phone) {
+        width: 100%;
+      }
+
+      .banner-content {
+        .category {
+          font: normal normal 700 20px/30px $font-poppins;
+          letter-spacing: 0px;
+          text-transform: uppercase;
+          opacity: 1;
+          margin: 30px 0;
+          @include breakpoint(desktop) {
+            font-size: 18px;
+            line-height: 26px;
+          }
+          @include breakpoint(laptop) {
+            font-size: 16px;
+            line-height: 24px;
+          }
+          @include breakpoint(tablet) {
+            font-size: 14px;
+            line-height: 22px;
+          }
+          @include breakpoint(phone) {
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
+        .title {
+          text-align: left;
+          font: normal normal 700 75px/89px $font-poppins;
+          letter-spacing: -2.68px;
+          color: #181e4b;
+          opacity: 1;
+          @include breakpoint(desktop) {
+            font-size: 65px;
+            line-height: 80px;
+          }
+          @include breakpoint(laptop) {
+            font-size: 55px;
+            line-height: 70px;
+          }
+          @include breakpoint(tablet) {
+            font-size: 45px;
+            line-height: 60px;
+          }
+          @include breakpoint(phone) {
+            font-size: 30px;
+            line-height: 45px;
+          }
+        }
+
+        .breif {
+          text-align: left;
+          font: normal normal 500 16px/30px $font-poppins;
+          letter-spacing: 0px;
+          color: $color-gray;
+          opacity: 1;
+          max-width: 85%;
+          margin: 35px 0;
+
+          @include breakpoint(tablet) {
+            font-size: 15px;
+            line-height: 26px;
+            margin: 25px 0;
+          }
+          @include breakpoint(phone) {
+            font-size: 15px;
+            line-height: 26px;
+            max-width: 90%;
+
+            margin: 15px 0;
+          }
+        }
+
+        .btn-actions {
+          display: flex;
+          gap: 40px;
+          align-items: center;
+          justify-content: flex-start;
+          margin: 25px 0;
+
+          @include breakpoint(tablet) {
+            margin: 25px 0;
+            gap: 20px;
+          }
+          @include breakpoint(phone) {
+            margin: 25px 0;
+            gap: 20px;
+          }
+          .more-btn {
+            @include btn;
+
+            min-width: 170px;
+            margin: 0;
+          }
+          .video-btn {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: flex-start;
+            width: max-content;
+            text-align: left;
+            font: normal normal 500 16px/30px $font-poppins;
+            letter-spacing: 0px;
+            color: $color-gray;
+            opacity: 1;
+            max-width: 85%;
+            cursor: pointer;
+
+            @include breakpoint(tablet) {
+              font-size: 15px;
+              line-height: 26px;
+            }
+            @include breakpoint(phone) {
+              font-size: 15px;
+              line-height: 26px;
+            }
+
+            svg {
+              width: 52px;
+              @include breakpoint(desktop) {
+                width: 45px;
+              }
+              @include breakpoint(laptop) {
+                width: 40px;
+              }
+              @include breakpoint(tablet) {
+                width: 35px;
+              }
+              @include breakpoint(phone) {
+                width: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .banner-img {
+      height: 100%;
+      width: 50%;
+
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+      @include breakpoint(phone) {
+        width: 100%;
+      }
+
+      .img {
+        height: 100%;
+        background-size: cover !important;
+      }
+    }
+  }
+}
+
+/*===  End of Slider Section =====*/

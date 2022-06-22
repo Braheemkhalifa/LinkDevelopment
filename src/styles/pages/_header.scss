@@ -1,0 +1,409 @@
+/*======================================
+=            Footer Section            =
+======================================*/
+
+header {
+  position: relative;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+
+  &.fixed {
+    background-color: $color-white;
+    position: fixed;
+  }
+  @include transition;
+  &.scroll-up {
+    transform: translateY(-100%);
+    @include transition;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    gap: 30px;
+
+    @include breakpoint(tablet) {
+      padding: 10px 25px;
+    }
+    @include breakpoint(phone) {
+      padding: 10px 25px;
+    }
+
+    .logo {
+      max-width: 180px;
+      @include breakpoint(tablet) {
+        max-width: 100px;
+        order: 2;
+      }
+      @include breakpoint(phone) {
+        max-width: 100px;
+        order: 2;
+      }
+    }
+    .menu-links {
+      list-style: none;
+      padding: 0px;
+      display: flex;
+      gap: 50px;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint(desktop) {
+        gap: 45px;
+      }
+      @include breakpoint(laptop) {
+        gap: 40px;
+      }
+      @include breakpoint(tablet) {
+        display: none;
+      }
+      @include breakpoint(phone) {
+        display: none;
+      }
+    }
+    .actions {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+      @include breakpoint(phone) {
+        display: none;
+      }
+
+      .actions-wrapper {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        gap: 50px;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(desktop) {
+          gap: 45px;
+        }
+        @include breakpoint(laptop) {
+          gap: 40px;
+        }
+        @include breakpoint(tablet) {
+          gap: 35px;
+        }
+        @include breakpoint(phone) {
+          gap: 30px;
+        }
+        li {
+          a {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .language-wrapper {
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+
+      @include breakpoint(tablet) {
+        order: 3;
+      }
+      @include breakpoint(phone) {
+        order: 3;
+      }
+
+      b {
+        font: normal normal 500 17px/22px $font-open-sans;
+        letter-spacing: 0px;
+        color: $color-header;
+        opacity: 1;
+        @include transition;
+
+        @include breakpoint(desktop) {
+          font-size: 17px;
+          line-height: 21px;
+        }
+        @include breakpoint(laptop) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        @include breakpoint(tablet) {
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          width: 100%;
+          display: block;
+        }
+        @include breakpoint(phone) {
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          width: 100%;
+          display: block;
+        }
+      }
+
+      svg {
+        width: 10px;
+        height: auto;
+      }
+      ul {
+        display: none;
+        position: absolute;
+        top: 29px;
+        right: -15px;
+        background: #fff;
+        width: 60px;
+        padding-top: 0px;
+        z-index: 1;
+        border-radius: 5px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+
+        list-style: none;
+        @include transition;
+
+        li {
+          position: relative;
+          text-align: center;
+          background: transparent;
+          z-index: 2;
+          @include transition;
+          cursor: pointer;
+          span {
+            padding: 15px 15px;
+            display: block;
+          }
+          &:hover {
+            background-color: $color-blue;
+            color: $color-white;
+            @include transition;
+          }
+        }
+      }
+
+      .triangle {
+        display: none;
+
+        position: absolute;
+        top: 15px;
+        right: -10px;
+        z-index: 10;
+        height: 14px;
+        overflow: hidden;
+        width: 30px;
+        background: transparent;
+        @include transition;
+
+        &:after {
+          content: '';
+          display: block;
+          z-index: 20;
+          width: 15px;
+          transform: rotate(45deg) translateY(0px) translatex(10px);
+          height: 15px;
+          background: #fff;
+          border-radius: 2px 0px 0px 0px;
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      &:hover {
+        ul {
+          display: block;
+          @include transition;
+        }
+        .triangle {
+          display: block;
+          @include transition;
+        }
+      }
+    }
+
+    .list-item {
+      a {
+        text-align: center;
+
+        font: normal normal 500 17px/22px $font-open-sans;
+        letter-spacing: 0px;
+        color: $color-header;
+        opacity: 1;
+
+        @include transition;
+
+        @include breakpoint(desktop) {
+          font-size: 17px;
+          line-height: 21px;
+        }
+        @include breakpoint(laptop) {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        @include breakpoint(tablet) {
+          font-size: 26px;
+          line-height: 70px;
+          text-align: center;
+          width: 100%;
+          display: block;
+        }
+        @include breakpoint(phone) {
+          font-size: 22px;
+          line-height: 60px;
+          text-align: center;
+          width: 100%;
+          display: block;
+        }
+
+        &:hover {
+          @include transition;
+
+          color: $color-blue;
+        }
+      }
+
+      &.button {
+        border: 1px solid $color-header;
+        padding: 9px 20px;
+        border-radius: 5px;
+        @include transition;
+        cursor: pointer;
+        @include breakpoint(tablet) {
+          padding: 2px 20px;
+          min-width: 200px;
+        }
+        @include breakpoint(phone) {
+          padding: 2px 20px;
+          min-width: 200px;
+        }
+        &:hover {
+          background-color: $color-pink;
+          border-color: $color-pink;
+          @include transition;
+          a {
+            color: $color-white !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $color-gray-2;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  transform: translateX(-100%);
+
+  &.active {
+    transform: translateX(0);
+    @include transition;
+  }
+  .container {
+    position: relative;
+
+    .close-icon {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      svg {
+        width: 20px;
+      }
+    }
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+    @include breakpoint(phone) {
+      flex-direction: column;
+    }
+    .menu-links {
+      list-style: none;
+      margin-top: 50px;
+      padding: 0px;
+      display: flex;
+      gap: 50px;
+      flex-grow: 1;
+      align-items: center;
+      justify-content: center;
+      display: block !important;
+    }
+    .actions {
+      @include breakpoint(tablet) {
+        display: block !important;
+        margin-top: 10px;
+      }
+      @include breakpoint(phone) {
+        display: block !important;
+        margin-top: 10px;
+      }
+
+      .actions-wrapper {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        gap: 50px;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+        @include breakpoint(tablet) {
+          flex-direction: column;
+          gap: 20px;
+        }
+        @include breakpoint(phone) {
+          flex-direction: column;
+          gap: 20px;
+        }
+        li {
+          a {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-mobile {
+  text-align: center;
+  cursor: pointer;
+  font: normal normal 500 17px/22px $font-open-sans;
+  letter-spacing: 0px;
+  color: $color-header;
+  opacity: 1;
+  display: none;
+  @include transition;
+
+  @include breakpoint(desktop) {
+    font-size: 17px;
+    line-height: 21px;
+    display: none;
+  }
+  @include breakpoint(laptop) {
+    font-size: 16px;
+    line-height: 20px;
+    display: none;
+  }
+  @include breakpoint(tablet) {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    display: block;
+    order: 1;
+  }
+  @include breakpoint(phone) {
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    display: block;
+    order: 1;
+  }
+}

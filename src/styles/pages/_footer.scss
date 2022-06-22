@@ -1,0 +1,294 @@
+/*======================================
+=            Footer Section            =
+======================================*/
+
+footer {
+  position: relative;
+  border: 1px solid red;
+  &:after {
+    position: absolute;
+    content: '';
+    bottom: 0px;
+    right: 0px;
+    width: 150px;
+    height: 50%;
+    max-height: 150px;
+    transform: matrix(-1, 0, 0, -1, 0, 0);
+    /* UI Properties */
+    background: #d5aee4 0% 0% no-repeat padding-box;
+    opacity: 0.8;
+    filter: blur(50px);
+  }
+  .container {
+    padding: 45px 15px;
+    z-index: 1;
+    position: relative;
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+
+      @include breakpoint(tablet) {
+        flex-direction: column;
+      }
+      @include breakpoint(phone) {
+        flex-direction: column;
+        gap: 5px;
+      }
+      .about {
+        max-width: 300px;
+        @include breakpoint(tablet) {
+          text-align: center;
+          margin: auto;
+        }
+        @include breakpoint(phone) {
+          text-align: center;
+          margin: 0px auto 25px;
+        }
+        p {
+          text-align: left;
+          font: normal normal 500 13px/19px $font-poppins;
+          letter-spacing: 0px;
+          color: $color-gray;
+          opacity: 1;
+
+          @include breakpoint(tablet) {
+            text-align: center;
+            margin: 15px auto;
+            max-width: 90%;
+          }
+          @include breakpoint(phone) {
+            text-align: center;
+            margin: 15px auto;
+            max-width: 90%;
+          }
+        }
+      }
+      .menu {
+        min-width: 200px;
+        @include breakpoint(desktop) {
+          min-width: 170px;
+        }
+        @include breakpoint(laptop) {
+          min-width: 140px;
+        }
+        @include breakpoint(tablet) {
+          font-size: 15px;
+          line-height: 18px;
+          min-width: 120px;
+
+          border-bottom: 1px solid $color-box-bg;
+        }
+        @include breakpoint(phone) {
+          font-size: 13px;
+          line-height: 16px;
+          border-bottom: 1px solid $color-box-bg;
+        }
+
+        .menu-title {
+          text-align: left;
+          font: normal normal 700 21px/26px $font-poppins;
+          letter-spacing: 0px;
+          color: $color-footer;
+          opacity: 1;
+          text-transform: capitalize;
+          opacity: 1;
+          margin: 0px 0px 35px;
+          .icon {
+            float: right;
+
+            @media only screen and (min-width: 992px) {
+              display: none;
+            }
+          }
+          @include breakpoint(desktop) {
+            font-size: 19px;
+            line-height: 24px;
+          }
+          @include breakpoint(laptop) {
+            font-size: 17px;
+            line-height: 22px;
+          }
+          @include breakpoint(tablet) {
+            font-size: 15px;
+            line-height: 20px;
+            margin: 0px 0px;
+            padding: 15px 0px;
+            cursor: pointer;
+          }
+          @include breakpoint(phone) {
+            font-size: 15px;
+            line-height: 20px;
+            margin: 0px 0px;
+            padding: 15px 0px;
+            cursor: pointer;
+          }
+        }
+        .menu-links {
+          list-style: none;
+          padding: 0px;
+          li {
+            a {
+              text-align: left;
+              font: normal normal 500 18px/22px $font-poppins;
+              letter-spacing: 0px;
+              color: $color-gray;
+              opacity: 1;
+              margin: 17px 0px;
+              display: block;
+              @include transition;
+
+              @include breakpoint(desktop) {
+                font-size: 17px;
+                line-height: 21px;
+              }
+              @include breakpoint(laptop) {
+                font-size: 16px;
+                line-height: 20px;
+              }
+              @include breakpoint(tablet) {
+                font-size: 15px;
+                line-height: 18px;
+              }
+              @include breakpoint(phone) {
+                font-size: 15px;
+                line-height: 18px;
+              }
+
+              &:hover {
+                @include transition;
+
+                color: $color-blue;
+              }
+            }
+          }
+        }
+      }
+      .contact {
+        @include breakpoint(phone) {
+          margin: 25px auto 0px;
+        }
+        .social-links {
+          display: flex;
+          justify-content: flex-start;
+          gap: 20px;
+
+          @include breakpoint(tablet) {
+            justify-content: center;
+            gap: 20px;
+          }
+
+          @include breakpoint(phone) {
+            justify-content: center;
+            gap: 20px;
+          }
+          .social {
+            background: #ffffff 0% 0% no-repeat padding-box;
+            box-shadow: 0px 2px 20px #0000001a;
+            opacity: 1;
+            width: 41px;
+            height: 41px;
+            border-radius: 50%;
+            position: relative;
+            cursor: pointer;
+            @include transition;
+            &:hover {
+              @include transition;
+              background: $color-blue;
+              svg {
+                path {
+                  fill: $color-white;
+                  @include transition;
+                }
+              }
+            }
+            svg {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              height: 15px;
+              width: auto;
+              @include transition;
+
+              path {
+                fill: $color-footer;
+                @include transition;
+              }
+            }
+          }
+        }
+        .discover-apps {
+          .title {
+            text-align: left;
+            font: normal normal 500 20px/24px $font-poppins;
+            letter-spacing: 0px;
+            color: $color-gray;
+            opacity: 1;
+            margin: 30px 0px 15px;
+
+            @include breakpoint(desktop) {
+              font-size: 18px;
+              line-height: 21px;
+            }
+            @include breakpoint(laptop) {
+              font-size: 16px;
+              line-height: 20px;
+            }
+            @include breakpoint(tablet) {
+              font-size: 16px;
+              line-height: 20px;
+              text-align: center;
+            }
+            @include breakpoint(phone) {
+              font-size: 16px;
+              line-height: 20px;
+              text-align: center;
+            }
+          }
+          .apps-links {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            @include breakpoint(tablet) {
+              justify-content: center;
+              gap: 20px;
+            }
+
+            @include breakpoint(phone) {
+              justify-content: center;
+              gap: 20px;
+            }
+
+            .app {
+              cursor: pointer;
+
+              img {
+                width: 100% !important;
+                max-width: 100px !important;
+                @include breakpoint(phone) {
+                  max-width: 120px !important;
+                  height: auto !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      margin: 45px auto 5px;
+      .copytights {
+        display: block;
+        width: 100%;
+        text-align: center;
+
+        font: normal normal 500 14px/17px $font-poppins;
+        letter-spacing: 0px;
+        color: $color-gray;
+        opacity: 1;
+      }
+    }
+  }
+}
+/*=====  End of Footer Section  ======*/

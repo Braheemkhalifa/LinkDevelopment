@@ -1,0 +1,540 @@
+/*======================================
+=         Things We Do Section         =
+======================================*/
+
+#thingsWeDo {
+  background-color: $color-box-bg;
+
+  padding: 40px 0px;
+  .wrapper {
+    padding: 50px 0px;
+
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    @include breakpoint(tablet) {
+      flex-direction: column;
+    }
+    @include breakpoint(phone) {
+      flex-direction: column;
+    }
+
+    .outline-title {
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: left;
+      font: normal normal 700 180px/190px $font-poppins;
+      letter-spacing: 0px;
+      color: #e2e2e200;
+      opacity: 1;
+      color: transparent;
+      -webkit-text-stroke: 1px $color-gray-2;
+      transform: translateX(-20%);
+      z-index: 2;
+      width: max-content;
+      height: 100%;
+
+      @include breakpoint(desktop) {
+        font-size: 140px;
+        line-height: 150px;
+      }
+      @include breakpoint(laptop) {
+        font-size: 120px;
+        line-height: 120px;
+      }
+      @include breakpoint(tablet) {
+        font-size: 90px;
+        line-height: 100px;
+      }
+      @include breakpoint(phone) {
+        font-size: 70px;
+        line-height: 90px;
+        right: 0;
+        left: unset;
+        transform: translateX(10%);
+      }
+    }
+    .images {
+      width: 50%;
+
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      transform: translateY(45px);
+      @include breakpoint(tablet) {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      @include breakpoint(phone) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .image-col {
+        width: max-content;
+        @include breakpoint(phone) {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+        &:last-of-type {
+          transform: translateY(-90px);
+          @include breakpoint(phone) {
+            transform: translateY(0px);
+          }
+        }
+        .img {
+          width: 250px;
+          height: 250px;
+          cursor: pointer;
+          background-size: cover !important;
+          background-position: center !important;
+          position: relative;
+          overflow: hidden;
+          @include transition;
+          @include breakpoint(desktop) {
+            width: 210px;
+            height: 210px;
+          }
+          @include breakpoint(laptop) {
+            width: 170px;
+            height: 170px;
+          }
+          @include breakpoint(tablet) {
+            width: 240px;
+            height: 240px;
+          }
+          @include breakpoint(phone) {
+            width: 50vw;
+            height: 50vw;
+
+            &:nth-of-type(2) {
+              transform: translateY(-25vw);
+            }
+          }
+
+          &:hover {
+            &:after {
+              @include transition;
+              opacity: 0.9;
+            }
+            .read {
+              transform: translateX(0);
+              @include transition;
+            }
+          }
+          &:after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $color-pink;
+            z-index: 1;
+            background: transparent linear-gradient(43deg, #13276b 0%, #00000000 100%) 0% 0%
+              no-repeat padding-box;
+            opacity: 0.3;
+            @include transition;
+          }
+          .title-wrapper {
+            position: absolute;
+            left: 10%;
+            bottom: 25%;
+            z-index: 2;
+
+            .text {
+              text-align: left;
+              font: normal normal 800 25px/38px $font-poppins;
+              letter-spacing: 0px;
+              color: $color-white;
+              opacity: 1;
+              margin: 0px;
+              @include text-stroke($color-white);
+
+              @include breakpoint(desktop) {
+                font-size: 20px;
+                line-height: 33px;
+              }
+              @include breakpoint(laptop) {
+                font-size: 16px;
+                line-height: 28px;
+              }
+              @include breakpoint(tablet) {
+                font-size: 20px;
+                line-height: 30px;
+              }
+              @include breakpoint(phone) {
+                font-size: 16px;
+                line-height: 25px;
+              }
+            }
+          }
+          .read {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            position: absolute;
+            left: 10%;
+            bottom: 10%;
+            width: auto;
+            @include transition;
+            z-index: 2;
+            transform: translateX(-150%);
+            svg {
+              width: 16px;
+              height: auto;
+              color: $color-white;
+            }
+            span {
+              text-align: left;
+              font: normal normal 400 16px/25px $font-poppins;
+              letter-spacing: 0px;
+              color: $color-white;
+              opacity: 1;
+              width: max-content;
+
+              @include breakpoint(desktop) {
+                font-size: 15px;
+                line-height: 25px;
+              }
+              @include breakpoint(laptop) {
+                font-size: 13px;
+                line-height: 22px;
+              }
+              @include breakpoint(tablet) {
+                font-size: 14px;
+                line-height: 18px;
+              }
+              @include breakpoint(phone) {
+                font-size: 12px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .content {
+      width: 45%;
+      background-color: $color-blue-dark;
+      padding: 69px;
+      position: relative;
+      z-index: 0;
+
+      @include breakpoint(desktop) {
+        padding: 69px 50px;
+        width: 45%;
+      }
+      @include breakpoint(laptop) {
+        width: 45%;
+
+        padding: 49px 40px;
+      }
+      @include breakpoint(tablet) {
+        width: 100%;
+        padding: 69px 55px;
+      }
+      @include breakpoint(phone) {
+        width: 100%;
+
+        padding: 69px 15px 45px;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: calc(100% + 250px);
+        height: 100%;
+        background-color: $color-pink;
+        z-index: -1;
+
+        @include breakpoint(desktop) {
+          width: calc(100% + 210px);
+        }
+        @include breakpoint(laptop) {
+          width: calc(100% + 170px);
+        }
+        @include breakpoint(tablet) {
+          width: 100%;
+          height: calc(100% + 150px);
+          top: unset;
+          bottom: 0;
+          transform: translateY(-0%);
+        }
+        @include breakpoint(phone) {
+          width: 100%;
+          height: calc(100% + 120vw);
+          top: unset;
+          bottom: 0;
+          transform: translateY(-0%);
+        }
+      }
+
+      .content-wrapper {
+        max-width: 550px;
+        margin: 0;
+
+        @include breakpoint(tablet) {
+          margin: 0 0 0 auto;
+        }
+
+        .title {
+          text-align: right;
+          font: normal normal 700 55px/80px $font-poppins;
+          letter-spacing: 0px;
+          color: $color-blue-darken;
+          margin: 0px !important;
+
+          @include breakpoint(desktop) {
+            font-size: 40px;
+            line-height: 55px;
+          }
+          @include breakpoint(laptop) {
+            font-size: 30px;
+            line-height: 45px;
+          }
+          @include breakpoint(tablet) {
+            font-size: 28px;
+            line-height: 40px;
+          }
+          @include breakpoint(phone) {
+            font-size: 24px;
+            line-height: 35px;
+          }
+        }
+        .description {
+          text-align: right;
+          font: normal normal 300 28px/38px $font-open-sans;
+          letter-spacing: 0px;
+          color: $color-white;
+          opacity: 1;
+          margin: 2rem auto 0px;
+
+          @include breakpoint(desktop) {
+            font-size: 24px;
+            line-height: 34px;
+          }
+          @include breakpoint(laptop) {
+            font-size: 19px;
+            line-height: 30px;
+          }
+          @include breakpoint(tablet) {
+            font-size: 18px;
+            line-height: 26px;
+          }
+          @include breakpoint(phone) {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===  End of ThingsWeDo Section =====*/
+
+/*======================================
+=             News Section             =
+======================================*/
+
+#newsSection {
+  padding: 30px 0px;
+  .container {
+    position: relative;
+    .circle-wrapper {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25%;
+      height: 25%;
+      max-height: 290px;
+      max-width: 290px;
+      z-index: -1;
+      transform: translate(150px, 30px) matrix(0, -1, -1, 0, 0, 0);
+
+      .circle {
+        border: 1px solid #e3e3e3;
+        opacity: 1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-radius: 50%;
+
+        &:nth-of-type(2) {
+          width: 92%;
+          height: 92%;
+        }
+        &:nth-of-type(3) {
+          width: 84%;
+          height: 84%;
+        }
+        &:nth-of-type(4) {
+          width: 76%;
+          height: 76%;
+        }
+        &:nth-of-type(5) {
+          width: 68%;
+          height: 68%;
+        }
+      }
+    }
+    .sub-title {
+      text-align: center;
+      font: normal normal 600 18px/27px $font-poppins;
+      letter-spacing: 0px;
+      color: $color-gray;
+      opacity: 1;
+      margin: 0px auto 5px;
+
+      @include breakpoint(desktop) {
+        font-size: 17px;
+        line-height: 25px;
+      }
+      @include breakpoint(laptop) {
+        font-size: 16px;
+        line-height: 23px;
+      }
+      @include breakpoint(tablet) {
+        font-size: 15px;
+        line-height: 21px;
+      }
+      @include breakpoint(phone) {
+        font-size: 15px;
+        line-height: 21px;
+      }
+    }
+    .main-title {
+      text-align: center;
+      font: normal normal bold 50px/67px $font-poppins;
+      letter-spacing: 0px;
+      color: $color-dark;
+      text-transform: capitalize;
+      opacity: 1;
+      margin: 0 auto;
+      @include breakpoint(desktop) {
+        font-size: 40px;
+        line-height: 55px;
+      }
+      @include breakpoint(laptop) {
+        font-size: 35px;
+        line-height: 50px;
+      }
+      @include breakpoint(tablet) {
+        font-size: 30px;
+        line-height: 45px;
+      }
+      @include breakpoint(phone) {
+        font-size: 25px;
+        line-height: 40px;
+      }
+    }
+
+    .filter {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto 45px;
+      padding-bottom: 5px;
+      overflow: auto;
+      @include breakpoint(tablet) {
+        justify-content: flex-start;
+        gap: 20px;
+      }
+      @include breakpoint(phone) {
+        justify-content: flex-start;
+        gap: 15px;
+        margin: 20px auto 15px;
+      }
+      button {
+        background-color: $color-gray-light;
+        text-align: center;
+        font: normal normal 500 18px/24px $font-open-sans;
+        letter-spacing: 0px;
+        color: $color-blue-dark;
+        opacity: 1;
+        border-radius: $btn-border-radius;
+        padding: 9px 6px;
+        min-width: 123px;
+        border: none;
+        cursor: pointer;
+
+        @include breakpoint(desktop) {
+          font-size: 17px;
+        }
+        @include breakpoint(laptop) {
+          font-size: 16px;
+        }
+        @include breakpoint(tablet) {
+          font-size: 15px;
+        }
+        @include breakpoint(phone) {
+          font-size: 14px;
+          min-width: 103px;
+        }
+
+        @include transition;
+        &.active,
+        &:hover {
+          background-color: $color-blue;
+          color: $color-white;
+          @include transition;
+        }
+      }
+    }
+
+    .news-wrapper {
+      display: flex;
+      gap: 40px;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 30px auto;
+      flex-wrap: wrap;
+      .single-news {
+        width: calc(33.333% - 27px);
+
+        @include breakpoint(tablet) {
+          width: calc(49.999% - 27px);
+        }
+        @include breakpoint(phone) {
+          width: 100%;
+        }
+
+        .news-card {
+          @include card;
+        }
+      }
+    }
+    .more-btn {
+      @include btn;
+      margin-top: 65px;
+      min-width: 286px;
+    }
+  }
+}
+
+/*=====  End of News Section  ======*/
+
+.alert {
+  text-align: center;
+  font: normal normal 600 18px/27px $font-poppins;
+  letter-spacing: 0px;
+  color: $color-gray;
+  opacity: 1;
+  margin: 0px auto 5px;
+}

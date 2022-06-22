@@ -1,0 +1,26 @@
+$color-gray: #5e6282;
+$color-gray-light2: #707070;
+$color-gray-light: #e3e3e3;
+$color-gray-2: #d9d9d9;
+$color-dark: #14183e;
+$color-blue: #13beff;
+$color-blue-dark: #0f526e;
+$color-blue-darken: #253776;
+$color-pink: #f215b6;
+$colot-orange: #ff7c16;
+$color-white: #ffffff;
+$color-box-shadow: #00000029;
+$color-box-bg: #eeeeee;
+$color-footer: #080809;
+$color-header: #212832;
+
+$screen-lg: 1200px !default;
+$screen-lg-min: $screen-lg !default;
+$screen-lg-desktop: $screen-lg-min !default;
+$screen-sm: 767px !default;
+$screen-sm-min: $screen-sm !default;
+$screen-md: 992px !default;
+$screen-md-min: $screen-md !default;
+$screen-md-max: ($screen-lg - 1) !default;
+
+$btn-border-radius: 10px;

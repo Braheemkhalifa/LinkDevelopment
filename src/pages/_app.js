@@ -1,10 +1,12 @@
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import '../styles/globals.scss';
-import React from 'react';
+import Layout from 'components/Shared/Layout';
 function MyApp({ Component, pageProps }) {
   return (
-    <div>
+    <Layout>
       <Component {...pageProps} />
-    </div>
+    </Layout>
   );
 }
 
