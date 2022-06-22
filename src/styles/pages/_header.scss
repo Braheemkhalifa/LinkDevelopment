@@ -35,6 +35,7 @@ header {
 
     .logo {
       max-width: 180px;
+      cursor: pointer;
       @include breakpoint(tablet) {
         max-width: 100px;
         order: 2;
@@ -176,13 +177,16 @@ header {
           z-index: 2;
           @include transition;
           cursor: pointer;
-          span {
+          a {
             padding: 15px 15px;
             display: block;
           }
           &:hover {
             background-color: $color-blue;
-            color: $color-white;
+
+            a {
+              color: $color-white !important;
+            }
             @include transition;
           }
         }

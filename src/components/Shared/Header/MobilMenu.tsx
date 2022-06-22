@@ -19,12 +19,12 @@ const MobilMenu = ({ headerMenu, isMenuOpend, setIsMenuOpend }) => {
           <ul className="actions-wrapper">
             <li className="list-item">
               <Link passHref href="/login">
-                Login
+                <a> Login</a>
               </Link>
             </li>
             <li className="button list-item ">
               <Link passHref href="/signup">
-                Sign up
+                <a> Sign up</a>
               </Link>
             </li>
           </ul>

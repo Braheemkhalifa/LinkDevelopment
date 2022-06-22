@@ -92,6 +92,7 @@
         .img {
           width: 250px;
           height: 250px;
+          display: block;
           cursor: pointer;
           background-size: cover !important;
           background-position: center !important;
@@ -520,11 +521,11 @@
         }
       }
     }
-    .more-btn {
-      @include btn;
-      margin-top: 65px;
-      min-width: 286px;
-    }
+  }
+  .more-btn {
+    @include btn;
+    margin-top: 65px;
+    min-width: 286px;
   }
 }
 

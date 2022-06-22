@@ -123,7 +123,9 @@ const Footer = () => {
                 <ul className="menu-links">
                   {singlMenu.menuItems.map(singlMenu => (
                     <li key={singlMenu.title}>
-                      <Link href={singlMenu.url}>{singlMenu.title}</Link>
+                      <Link href={singlMenu.url}>
+                        <a>{singlMenu.title}</a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -136,7 +138,7 @@ const Footer = () => {
               {socialList.map(social => (
                 <div key={social.url} className="social">
                   <Link passHref href={social.url}>
-                    <div>{social.icon}</div>
+                    <a>{social.icon}</a>
                   </Link>
                 </div>
               ))}
@@ -148,7 +150,9 @@ const Footer = () => {
                 {appsList.map(app => (
                   <div key={app.url} className="app">
                     <Link passHref href={app.url}>
-                      <Image src={app.img} width="848" height="252" alt={app.url} />
+                      <a>
+                        <Image src={app.img} width="848" height="252" alt={app.url} />
+                      </a>
                     </Link>
                   </div>
                 ))}

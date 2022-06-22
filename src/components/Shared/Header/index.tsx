@@ -72,17 +72,19 @@ const Header = () => {
     `}
       >
         <div className="container">
-          <div className="logo">
-            <Link passHref href="/">
+          <Link passHref href="/">
+            <a className="logo">
               <Image src={Logo} alt="Link Development Logo" width="158" height="88" />
-            </Link>
-          </div>
+            </a>
+          </Link>
           {size.width >= 993 && (
             <>
               <ul className="menu-links">
                 {headerMenu.map(singlMenu => (
                   <li className="list-item" key={singlMenu.title}>
-                    <Link href={singlMenu.url}>{singlMenu.title}</Link>
+                    <Link href={singlMenu.url}>
+                      <a>{singlMenu.title}</a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -90,7 +92,7 @@ const Header = () => {
                 <ul className="actions-wrapper">
                   <li className="list-item">
                     <Link passHref href="/login">
-                      Login
+                      <a> Login</a>
                     </Link>
                   </li>
                   <li className="button list-item ">
@@ -114,9 +116,9 @@ const Header = () => {
               {locales?.map(singleLocale => (
                 <li key={singleLocale} className="list-item">
                   <Link passHref href={asPath} locale={singleLocale}>
-                    <span className={`${singleLocale == locale && 'active'} `}>
+                    <a className={`${singleLocale == locale && 'active'} `}>
                       {singleLocale === 'en' ? 'En' : 'ع'}
-                    </span>
+                    </a>
                   </Link>
                 </li>
               ))}

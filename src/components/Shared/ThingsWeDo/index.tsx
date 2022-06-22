@@ -12,7 +12,7 @@ const ThingsWeDo = () => {
           <div className="images">
             <div className="image-col">
               <Link passHref href="/transformation">
-                <div
+                <a
                   className="img cover"
                   style={{
                     background:
@@ -27,12 +27,12 @@ const ThingsWeDo = () => {
                   <div className="read">
                     <RightArrowIcon /> <span>Read more</span>
                   </div>
-                </div>
+                </a>
               </Link>
             </div>
             <div className="image-col">
               <Link passHref href="/envision">
-                <div
+                <a
                   className="img cover"
                   style={{
                     background:
@@ -48,10 +48,10 @@ const ThingsWeDo = () => {
                   <div className="read">
                     <RightArrowIcon /> <span>Read more</span>
                   </div>
-                </div>
+                </a>
               </Link>
               <Link passHref href="/dynamics">
-                <div
+                <a
                   className="img cover"
                   style={{
                     background: 'url(https://linkdevelopment.com/app/uploads/2021/06/PR_Cover.jpg)'
@@ -65,13 +65,13 @@ const ThingsWeDo = () => {
                   <div className="read">
                     <RightArrowIcon /> <span>Read more</span>
                   </div>
-                </div>
+                </a>
               </Link>
             </div>
 
             <div className="image-col">
               <Link passHref href="/crafty">
-                <div
+                <a
                   className="img cover"
                   style={{
                     background: 'url(https://linkdevelopment.com/app/uploads/2020/12/Group-437.png)'
@@ -85,11 +85,11 @@ const ThingsWeDo = () => {
                   <div className="read">
                     <RightArrowIcon /> <span>Read more</span>
                   </div>
-                </div>
+                </a>
               </Link>
 
               <Link passHref href="/services">
-                <div
+                <a
                   className="img cover"
                   style={{
                     background:
@@ -104,7 +104,7 @@ const ThingsWeDo = () => {
                   <div className="read">
                     <RightArrowIcon /> <span>Read more</span>
                   </div>
-                </div>
+                </a>
               </Link>
             </div>
           </div>

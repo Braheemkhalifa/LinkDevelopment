@@ -55,7 +55,6 @@ const NewsSection = ({ title, subTitle, displayAll }: Props) => {
     setSelectedCategory(categoryId);
     setFilteredNews(newNews);
   };
-
   return (
     <section id="newsSection" className="section">
       <div className="container">
@@ -95,9 +94,9 @@ const NewsSection = ({ title, subTitle, displayAll }: Props) => {
         </div>
       </div>
       {totalNewsNum > 6 && !displayAll && (
-        <div className="more-btn">
-          <Link href="/news">View All News </Link>
-        </div>
+        <Link href="/news">
+          <a className="more-btn"> View All News</a>
+        </Link>
       )}
     </section>
   );

@@ -14,7 +14,9 @@ const SingleSlide = ({ brief, title, itemUrl, category, videoUrl, colorCode }) =
             <p className="breif">{brief}</p>
             <div className="btn-actions">
               <div className="more-btn btn">
-                <Link href={itemUrl}>Find out more</Link>
+                <Link href={itemUrl}>
+                  <a>Find out more</a>
+                </Link>
               </div>
               <div className="video-btn btn">
                 <YoutubeIcon /> Play Demo
