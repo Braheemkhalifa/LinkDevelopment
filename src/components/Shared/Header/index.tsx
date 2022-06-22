@@ -63,7 +63,6 @@ const Header = () => {
       window.removeEventListener('scroll', updateScrollDirection); // clean up
     };
   }, [scrollDirection, isShrunk]);
-
   return (
     <>
       <header
