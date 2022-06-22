@@ -3,12 +3,24 @@
 ======================================*/
 
 .slide-content {
-  height: 40rem;
+  height: 100vh;
+  padding-top: 10%;
+  position: relative;
+  overflow: hidden;
+  .decore {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    transform: translate(30%, -30%);
+    opacity: 1;
+  }
   .container {
     display: flex;
     height: 100%;
-    position: relative;
     z-index: 12;
+    position: relative;
+    z-index: 1;
     @include breakpoint(tablet) {
       flex-direction: column;
     }
@@ -59,6 +71,9 @@
           letter-spacing: -2.68px;
           color: #181e4b;
           opacity: 1;
+          position: relative;
+          width: max-content;
+          max-width: 100%;
           @include breakpoint(desktop) {
             font-size: 65px;
             line-height: 80px;
@@ -74,6 +89,28 @@
           @include breakpoint(phone) {
             font-size: 30px;
             line-height: 45px;
+          }
+          .title-vector {
+            position: absolute;
+            width: 50%;
+            height: 35px;
+            right: 0;
+            top: 20%;
+            transform: translateX(50%);
+            z-index: -1;
+
+            @include breakpoint(desktop) {
+              height: 30px;
+            }
+            @include breakpoint(laptop) {
+              height: 25px;
+            }
+            @include breakpoint(tablet) {
+              height: 20px;
+            }
+            @include breakpoint(phone) {
+              height: 15px;
+            }
           }
         }
 
@@ -120,6 +157,19 @@
 
             min-width: 170px;
             margin: 0;
+
+            @include breakpoint(desktop) {
+              padding: 16px 6px;
+            }
+            @include breakpoint(laptop) {
+              padding: 14px 6px;
+            }
+            @include breakpoint(tablet) {
+              padding: 12px 6px;
+            }
+            @include breakpoint(phone) {
+              padding: 10px 6px;
+            }
           }
           .video-btn {
             display: flex;
