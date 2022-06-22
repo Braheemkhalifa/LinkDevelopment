@@ -68,11 +68,8 @@ const Header = () => {
     <>
       <header
         className={` header-wrapper 
-    
-     ${scrollDirection === 'up' && isShrunk && 'scroll-up '} 
-      
-     ${isShrunk && 'fixed'}
-    
+        ${scrollDirection === 'up' && isShrunk && 'scroll-up '} 
+        ${isShrunk && 'fixed'}
     `}
       >
         <div className="container">
