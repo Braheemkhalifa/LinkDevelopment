@@ -86,7 +86,6 @@ const Header = () => {
                   </li>
                 ))}
               </ul>
-
               <div className="actions">
                 <ul className="actions-wrapper">
                   <li className="list-item">
